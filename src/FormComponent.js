@@ -31,7 +31,7 @@ export default function FormComponent() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(schema) });
+  } = useForm({ resolver: yupResolver(schema), mode: "onBlur" });
   const [formData, setFormData] = useState({});
 
   const onSubmit = (data) => setFormData(data);
